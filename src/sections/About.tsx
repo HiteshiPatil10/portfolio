@@ -40,7 +40,7 @@ const About = () => {
         >
           <img 
             src={myImage}
-            alt="Manas Patil - Full Stack Developer professional portrait"
+            alt="Hiteshi Patil - Full Stack Developer professional portrait"
             className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
             loading="lazy"
             width="600"
@@ -56,9 +56,9 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            I'm Manas Patil, a Full Stack Developer with a passion for creating innovative web solutions. 
+            I'm Hiteshi Patil, a Full Stack Developer with a passion for creating innovative web solutions. 
             With expertise in modern web technologies like React, Node.js, and cloud platforms, I specialize 
-            in building scalable applications that deliver exceptional user experiences.
+            in building scalable applications that deliver exceptional user experiences with having good problem solving skill.
           </motion.p>
           
           <motion.p 
@@ -83,36 +83,36 @@ const About = () => {
             aria-label="Social media links"
           >
             <a 
-              href="https://github.com/manaspatil7" 
+              href="https://github.com/HiteshiPatil10" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-red-600 transition-colors transform hover:scale-110"
-              aria-label="Visit Manas Patil's GitHub profile"
+              aria-label="Visit Hiteshi Patil's GitHub profile"
             >
               <Github size={24} aria-hidden="true" />
             </a>
             <a 
-              href="https://www.linkedin.com/in/manas-patil-59521a262/" 
+              href="https://www.linkedin.com/in/hiteshi-patil-118a5325b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-red-600 transition-colors transform hover:scale-110"
-              aria-label="Visit Manas Patil's LinkedIn profile"
+              aria-label="Visit Hiteshi Patil's LinkedIn profile"
             >
               <Linkedin size={24} aria-hidden="true" />
             </a>
             <a 
-              href="mailto:patilmanas63@gmail.com" 
+              href="mailto:hiteshi10092004@gmail.com" 
               className="text-gray-400 hover:text-red-600 transition-colors transform hover:scale-110"
-              aria-label="Send email to Manas Patil"
+              aria-label="Send email to Hiteshi Patil"
             >
               <Mail size={24} aria-hidden="true" />
             </a>
             <a 
-              href="https://drive.google.com/file/d/1jNlRPYh2yVkkvCRAF7kWxHUHdyxHT5UT/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1zby1jVTDk_-h-ZI5X5oPPuuyVPNOPVP6/view" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-red-600 transition-colors transform hover:scale-110"
-              aria-label="Download Manas Patil's resume PDF"
+              aria-label="Download Hiteshi Patil's resume PDF"
             >
               <FileText size={24} aria-hidden="true" />
             </a>

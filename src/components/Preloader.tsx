@@ -35,7 +35,7 @@ const Preloader = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Manas Patil
+          Hiteshi Patil
         </motion.div>
         <div className="preloader-text">{currentQuote}</div>
       </div>

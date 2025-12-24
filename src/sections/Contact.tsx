@@ -40,10 +40,10 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_du88pyp', 
-        'template_wd2z23e', 
+        'service_ufk7wo9', 
+        'template_xl8z6hv', 
         templateParams, 
-        'ZfggM7dLwou1E58DH'
+        'LzGrVyRYK4duW92_i'
       );
       setStatusMessage('✅ Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });

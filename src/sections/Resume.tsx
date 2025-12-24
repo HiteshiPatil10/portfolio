@@ -18,54 +18,54 @@ const Resume = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], [0, 1, 1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.2], [0.8, 1]);
 
-  const experience = [
+  const certification = [
     {
-      title: "Fullstack Developer Intern",
-      company: "SIRO",
-      location: "Mumbai - Hybrid",
-      period: "Aug 2025 - Present",
-      description: "Developed patient data dashboard with proprietary validation checks. Built backend APIs for dynamic check triggers and collaborated on clinical workflows.",
-      logo: "https://cdn.expresspharma.in/wp-content/uploads/2019/05/20162522/Siro_purpleonwhite_rgb.jpg"
+      title: "Google Data Analytics Professional Certificate.",
+      company: "By Google on Coursera",
+      certificate: "https://drive.google.com/file/d/1NcfJoAW53RoexFXAe9DxCryVzBnAUNMJ/view",
+      logo: "https://images.credly.com/images/c697cca4-0ae9-4821-ac6f-6156a041243f/image.png"
     },
     {
-      title: "Research Intern",
-      company: "COEP Technological University",
-      location: "Pune - Hybrid",
-      period: "May 2025 - Aug 2025",
-      description: "Researched LLMs and multimodal AI under IndiaAI Mission. Focused on KV caching and attention mechanisms with performance evaluations.",
-      logo: "https://img.jagranjosh.com/images/2023/August/2882023/coep_1.jpg"
+      title: "Google UX Design Professional Certificate.",
+      company: "By Google on Coursera",
+      certificate: "https://drive.google.com/file/d/1_vqHaRVQ7-o7LVqD2gEtySuIggcgv7KK/view",
+      logo: "https://images.credly.com/images/1ad28ff4-5b00-43ee-9898-f002ef7c6a5a/GCC_badge_UX_1000x1000.png"
     },
     {
-      title: "Developer Intern",
-      company: "Adlytica",
-      location: "Poland - Remote",
-      period: "May 2025 - Jul 2025",
-      description: "Led team for content platform development with Supabase. Implemented automation workflows using n8n and Make.com.",
-      logo: "https://tse3.mm.bing.net/th/id/OIP.3MFO7yARtBalRdRQSEM4hQHaHa?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3"
+      title: "IBM DevOps and Software Engineering",
+      company: "By IBM on Coursera",
+      certificate: "https://drive.google.com/file/d/14dHe-K7KNHa_hGgF9vrjodIR1dL92HDa/view.",
+      logo: "https://frontlinesmedia.in/wp-content/uploads/2024/09/IBM-LOGO.jpg"
+    },
+    {
+      title: "AWS Certified Solutions Architect - Associate (SAA-C03)",
+      company: "By LinkedIn Learning",
+      certificate: "https://drive.google.com/file/d/1u6b_SFYtEk9MSwtj0D1_FlaE357og5-3/view?usp=drive_link",
+      logo: "https://blog.ippon.fr/content/images/2023/05/AWS_SAA_badge-1.png"
     }
   ];
 
   const education = [
     {
-      institution: "Thadomal Shahani Engineering College",
-      degree: "B.E in AI & Data Science",
+      institution: "Vishwakarma Institute of Technology",
+      degree: "B.Tech in Information Technology",
       period: "2022 - 2026",
-      grade: "CGPA: 8.58",
-      logo: "https://cache.careers360.mobi/media/colleges/social-media/2804/2018/6/5/Thadomal-Shahani-Engineering-College-Mumbai-Logo.jpg"
+      grade: "CGPA: 8.56",
+      logo: "https://www.vishwakarma-group.com/images/logos/VIT-logo.png"
     },
     {
-      institution: "Pace Junior Science College",
+      institution: "Vyankatesh Juniour Science College",
       degree: "HSC (Maharashtra Board)",
-      period: "2019 - 2021",
-      grade: "88%",
-      logo: "https://images.uniapply.com/uploads/college/image/logo/4610/Pace_Junior_Science_College_3599_Logo_UA_1.JPG"
+      period: "2020 - 2022",
+      grade: "88.17%",
+      logo: "https://cache.careers360.mobi/media/colleges/social-media/logo/Logo_of_Shri_Vyankatesh_Polytechnic_Wardha_Logo.png"
     },
     {
-      institution: "Christ Church School",
-      degree: "ICSE",
-      period: "2009 - 2019",
-      grade: "95%",
-      logo: "https://images.uniapply.com/uploads/college/image/logo/4610/Christ_Church_School_2484_Logo_1.jpg"
+      institution: "Agragami High School",
+      degree: "SSC (Maharashtra Board)",
+      period: "2019 - 2020",
+      grade: "94%",
+      logo: "http://www.agragamiconventschool.org/wp-content/uploads/2019/02/Logo-agragami-2-300x225.png"
     }
   ];
 
@@ -86,6 +86,9 @@ const Resume = () => {
       skills: [
         { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+        { name: "Tailwind CSS",logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png?20230715030042"},
+        { name: "JavaScript",logo: "https://images.seeklogo.com/logo-png/27/1/javascript-js-logo-png_seeklogo-273557.png"},
+        { name: "Bootstrap",logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" },
         { name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
         { name: "Express.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
@@ -108,10 +111,9 @@ const Resume = () => {
   ];
 
   const achievements = [
-    "Winner at Jamrang AI/ML hackathon by VijayBhoomi University",
-    "Consolation prize at Rubix 2025 hackathon by CSI TSEC",
-    "Finalist at Hackshetra'24, national hackathon by NIT Kurukshetra",
-    "Senior Core Team Member at CodeTantra, TSEC – 500+ participants"
+    "Winner of Internal Smart India Hackathon 2024",
+    "Winner of Internal Smart India Hackathon 2025",
+    "Published a patent and Research papers",
   ];
 
   const LogoBox = ({ logo }: { logo: string }) => {
@@ -160,14 +162,14 @@ const Resume = () => {
           Resume
         </motion.h2>
         <motion.a 
-          href="https://drive.google.com/file/d/1jNlRPYh2yVkkvCRAF7kWxHUHdyxHT5UT/view?usp=sharing"
+          href="https://drive.google.com/file/d/1zby1jVTDk_-h-ZI5X5oPPuuyVPNOPVP6/view"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-all duration-300 hover:shadow-lg group"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.05 }}
-          aria-label="Download Manas Patil's resume PDF"
+          aria-label="Download Hiteshi Patil's resume PDF"
         >
           <Download size={20} className="group-hover:animate-bounce" aria-hidden="true" />
           Download Resume
@@ -177,10 +179,10 @@ const Resume = () => {
       {/* Two Column Layout */}
       <div className="grid lg:grid-cols-2 gap-8">
         
-        {/* LEFT COLUMN - EXPERIENCE + EDUCATION */}
+        {/* LEFT COLUMN - CERTIFICATION + EDUCATION */}
         <div className="space-y-10">
           
-          {/* EXPERIENCE */}
+          {/* CERTIFICATION */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -188,14 +190,14 @@ const Resume = () => {
           >
             <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-white border-b border-gray-700 pb-4">
               <Briefcase className="text-red-600" size={28} />
-              Experience
+              Certification
             </h3>
             
             <div className="space-y-6 relative">
               {/* Timeline Line */}
               <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-700" />
               
-              {experience.map((job, index) => (
+              {certification.map((job, index) => (
                 <motion.div 
                   key={index} 
                   className="relative pl-16 group"
@@ -215,11 +217,16 @@ const Resume = () => {
                   <div className="bg-gray-800/50 p-5 rounded-lg border border-gray-700 hover:border-red-600 transition-all duration-300 min-h-[180px] flex flex-col">
                     <div className="flex justify-between items-start gap-4 mb-2">
                       <h4 className="text-base font-semibold text-white">{job.title}</h4>
-                      <span className="text-xs text-gray-500 whitespace-nowrap bg-gray-900 px-2 py-1 rounded">{job.period}</span>
+                      <a 
+                      href={job.certificate}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-auto inline-flex items-center gap-2 text-red-500 hover:text-red-400 text-sm font-medium transition-colors"
+                    >
+                      View Certificate
+                     </a>
                     </div>
                     <p className="text-red-500 font-medium text-sm mb-1">{job.company}</p>
-                    <p className="text-xs text-gray-500 mb-3">{job.location}</p>
-                    <p className="text-gray-400 text-sm leading-relaxed flex-grow">{job.description}</p>
                   </div>
                 </motion.div>
               ))}

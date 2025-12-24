@@ -23,11 +23,11 @@ const Contact = () => {
   const [isSending, setIsSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { id: any; value: any; }; }) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setIsSending(true);
     setStatusMessage('');
@@ -74,15 +74,15 @@ const Contact = () => {
           <address className="space-y-4 not-italic">
             <div className="flex items-center gap-4">
               <Mail className="text-red-600" aria-hidden="true" />
-              <span className="text-gray-400"><a href="mailto:patilmanas63@gmail.com" className="text-gray-400 hover:underline" aria-label="Email Manas Patil">patilmanas63@gmail.com</a></span>
+              <span className="text-gray-400"><a href="mailto:hiteshi10092004@gmail.com" className="text-gray-400 hover:underline" aria-label="Email Hiteshi Patil">hiteshi10092004@gmail.com</a></span>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="text-red-600" aria-hidden="true" />
-              <span className="text-gray-400"><a href="tel:+917710063201" className="text-gray-400 hover:underline" aria-label="Call Manas Patil">+91 77100*****</a></span>
+              <span className="text-gray-400"><a href="tel:+917058473751" className="text-gray-400 hover:underline" aria-label="Call Hiteshi Patil">+91 7058******</a></span>
             </div>
             <div className="flex items-center gap-4">
               <MapPin className="text-red-600" aria-hidden="true" />
-              <span className="text-gray-400" itemProp="addressLocality">Mumbai, India</span>
+              <span className="text-gray-400" itemProp="addressLocality">Pune, India</span>
             </div>
           </address>
         </motion.div>

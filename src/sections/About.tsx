@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import myImage from '../assests/manu.jpg'
+import myImage from '../assests/manu.jpeg'
 
 const About = () => {
   const ref = useScrollReveal();
@@ -43,8 +43,8 @@ const About = () => {
             alt="Hiteshi Patil - Full Stack Developer professional portrait"
             className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
             loading="lazy"
-            width="600"
-            height="800"
+            width="500"
+            height="400"
           />
         </motion.div>
         

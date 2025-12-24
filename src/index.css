@@ -84,7 +84,7 @@ html {
 }
 
 .preloader-logo::before {
-  content: 'M';
+  content: 'H';
   position: absolute;
   top: 50%;
   left: 50%;

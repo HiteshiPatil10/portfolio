@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Github } from 'lucide-react';
-import img1 from '../assests/culturalai.jpg';
-import img2 from '../assests/legal.jpg';
-import img3 from '../assests/fingyaan.jpg'
-import img4 from '../assests/Screenshot 2024-10-06 192248.png'
+import img1 from '../assests/img1.png';
+import img2 from '../assests/img2.jpeg';
+import img3 from '../assests/img4.png'
+import img4 from '../assests/img3.png'
 import img5 from '../assests/fashiontrend tracker.png'
 import img6 from '../assests/perfume.png'
 
@@ -18,30 +18,30 @@ const fallbackImages = [
 const projects = [
   {
     id: 1,
-    title: "Cultural AI",
-    description: "An AI-powered platform for identifying and classifying cultural artifacts, providing historical and cultural insights to preserve global heritage.",
+    title: "API-HawkEye",
+    description: "Develop an AI-powered monitoring solution for a large-scale, distributed multi-API software platform that generates vast amounts of log data from high-frequency API calls.",
     image: img1,
-    tech: ["React", "Node.js", "LLM's","Gemini"],
-    github: "https://github.com/manaspatil7/Cultural-AI"
+    tech: ["JavaScript", "Go", "Python","Dockerfile"],
+    github: "https://github.com/HiteshiPatil10/API-HawkEye"
   },
   {
     id: 2,
-    title: "Legal AI Pro",
-    description: "An AI-powered platform that simplifies legal processes by providing accessible information, automating tasks, and offering insights for a user-friendly legal experience.",
+    title: "VanAdhikaar",
+    description: "Development of AI-powered FRA Atlas and WebGIS-based Decision Support System(DSS) for Integrated Monitoring of forest Rights Act(FRA) impllementation.",
     image: img2,
-    tech: ["Node.js", "LLM's", "Tailwind","Typescript"],
-    github: "https://github.com/manaspatil7/TsecHacks25_Status200"
+    tech: ["React", "TailwindCSS", "Leaflet","Python","FastAPI","PostgreSQL","PostGIS","Docker"],
+    github: "https://youtu.be/AmGK8K4cC-U"
   },
   
   {
     id: 3,
-    title: "Health Plus",
-    description: "A React-based platform offering accessible and personalized healthcare services, connecting users with expert doctors, scheduling appointments, and providing trusted medical advice.",
+    title: "XEMOX",
+    description: " A Decentralized NFT Marketplace using wallet abstraction and IPFS.",
     image: img4,
-    tech: ["React", "Firebase", "Express.js","Node.js"],
-    github: "https://github.com/manaspatil7/HealthPlus-With-CHATBOT"
+    tech: ["TailwindCSS", "Vite + React", "IPFS","etherum"],
+    github: "https://github.com/HiteshiPatil10/Xemox.git"
   },
-  {
+  /*{
     id: 4,
     title: "FinGyaan",
     description: "A comprehensive platform bridging the financial literacy gap with interactive education, personalized insights, market news, portfolio management, and financial calculators.",
@@ -64,7 +64,7 @@ const projects = [
     image: img6,
     tech: ["Next.js", "Typescript", "MongoDB"],
     github: "https://github.com/manas-patil/blog-platform"
-  }
+  }*/
 ];
 
 const Work = () => {

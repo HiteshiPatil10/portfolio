@@ -64,7 +64,7 @@ const Home = () => {
   };
 
   const text = "Hi, I'm";
-  const name = "Manas";
+  const name = "Hiteshi";
   const role = "Full Stack Developer";
 
   return (
@@ -134,7 +134,7 @@ const Home = () => {
         >
           Passionate about creating innovative web solutions and transforming ideas into 
           seamless digital experiences. Specializing in modern web technologies and 
-          user-centric design.
+          user-centric design with good problem solving skill.
         </motion.p>
 
         <motion.div

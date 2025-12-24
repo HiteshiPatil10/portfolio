@@ -28,7 +28,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('home')} 
             className="text-2xl font-bold"
           >
-            <span className="text-red-600">M</span>anas's Portfolio
+            <span className="text-red-600">H</span>iteshi's Portfolio
           </button>
 
           {/* Desktop Navigation */}

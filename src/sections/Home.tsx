@@ -65,7 +65,7 @@ const Home = () => {
 
   const text = "Hi, I'm";
   const name = "Hiteshi";
-  const role = "Full Stack Developer";
+  const role = "Software Developer";
 
   return (
     <motion.section 

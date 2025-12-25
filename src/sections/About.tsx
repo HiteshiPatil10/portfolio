@@ -40,7 +40,7 @@ const About = () => {
         >
           <img 
             src={myImage}
-            alt="Hiteshi Patil - Full Stack Developer professional portrait"
+            alt="Hiteshi Patil - Software Developer professional portrait"
             className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
             loading="lazy"
             width="500"
@@ -56,7 +56,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            I'm Hiteshi Patil, a Full Stack Developer with a passion for creating innovative web solutions. 
+            I'm Hiteshi Patil, a Software Engineer with a passion for creating innovative web solutions. 
             With expertise in modern web technologies like React, Node.js, and cloud platforms, I specialize 
             in building scalable applications that deliver exceptional user experiences with having good problem solving skill.
           </motion.p>

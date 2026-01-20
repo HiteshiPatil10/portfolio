@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const containerRef = React.useRef(null);
+  const containerRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -23,66 +23,102 @@ const Contact = () => {
   const [isSending, setIsSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
 
-  const handleChange = (e: { target: { id: any; value: any; }; }) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
     setStatusMessage('');
 
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message,
-    };
+    const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+    const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+
+    const text = `
+📩 New Portfolio Contact
+
+👤 Name: ${formData.name}
+📧 Email: ${formData.email}
+
+💬 Message:
+${formData.message}
+    `;
 
     try {
-      await emailjs.send(
-        'service_ufk7wo9', 
-        'template_xl8z6hv', 
-        templateParams, 
-        'LzGrVyRYK4duW92_i'
+      const res = await fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text,
+          }),
+        }
       );
+
+      if (!res.ok) throw new Error('Telegram API Error');
+
       setStatusMessage('✅ Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error(error);
       setStatusMessage('❌ Failed to send message. Try again.');
-      console.error('EmailJS error:', error);
     } finally {
       setIsSending(false);
     }
   };
 
   return (
-    <motion.section 
+    <motion.section
       ref={containerRef}
       className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
       style={{ y, opacity, scale }}
       aria-labelledby="contact-heading"
     >
-      <h2 id="contact-heading" className="text-3xl font-bold mb-12">Get in Touch</h2>
-      
+      <h2 id="contact-heading" className="text-3xl font-bold mb-12">
+        Get in Touch
+      </h2>
+
       <div className="grid md:grid-cols-2 gap-12">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+          <h3 className="text-xl font-semibold mb-6">
+            Contact Information
+          </h3>
+
           <address className="space-y-4 not-italic">
             <div className="flex items-center gap-4">
-              <Mail className="text-red-600" aria-hidden="true" />
-              <span className="text-gray-400"><a href="mailto:hiteshi10092004@gmail.com" className="text-gray-400 hover:underline" aria-label="Email Hiteshi Patil">hiteshi10092004@gmail.com</a></span>
+              <Mail className="text-red-600" />
+              <a
+                href="mailto:hiteshi10092004@gmail.com"
+                className="text-gray-400 hover:underline"
+              >
+                hiteshi10092004@gmail.com
+              </a>
             </div>
+
             <div className="flex items-center gap-4">
-              <Phone className="text-red-600" aria-hidden="true" />
-              <span className="text-gray-400"><a href="tel:+917058473751" className="text-gray-400 hover:underline" aria-label="Call Hiteshi Patil">+91 7058******</a></span>
+              <Phone className="text-red-600" />
+              <a
+                href="tel:+917058473751"
+                className="text-gray-400 hover:underline"
+              >
+                +91 7058******
+              </a>
             </div>
+
             <div className="flex items-center gap-4">
-              <MapPin className="text-red-600" aria-hidden="true" />
-              <span className="text-gray-400" itemProp="addressLocality">Pune, India</span>
+              <MapPin className="text-red-600" />
+              <span className="text-gray-400">
+                Pune, India
+              </span>
             </div>
           </address>
         </motion.div>
@@ -94,7 +130,7 @@ const Contact = () => {
         >
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+              <label className="block text-sm text-gray-400 mb-2">
                 Name
               </label>
               <input
@@ -103,11 +139,12 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full px-4 py-2 bg-gray-800 rounded-lg focus:ring-2 focus:ring-red-600 outline-none"
               />
             </div>
+
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+              <label className="block text-sm text-gray-400 mb-2">
                 Email
               </label>
               <input
@@ -116,11 +153,12 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-full px-4 py-2 bg-gray-800 rounded-lg focus:ring-2 focus:ring-red-600 outline-none"
               />
             </div>
+
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+              <label className="block text-sm text-gray-400 mb-2">
                 Message
               </label>
               <textarea
@@ -129,20 +167,25 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600"
-              ></textarea>
+                className="w-full px-4 py-2 bg-gray-800 rounded-lg focus:ring-2 focus:ring-red-600 outline-none"
+              />
             </div>
+
             <button
               type="submit"
               disabled={isSending}
-              className="flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              aria-label="Submit contact form"
+              className="flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition disabled:opacity-50"
             >
               {isSending ? 'Sending...' : 'Send Message'}
-              <Send size={20} aria-hidden="true" />
+              <Send size={18} />
             </button>
+
             {statusMessage && (
-              <p className={`mt-2 text-sm ${statusMessage.includes('❌') ? 'text-red-500' : 'text-green-500'}`}>
+              <p className={`text-sm mt-2 ${
+                statusMessage.includes('❌')
+                  ? 'text-red-500'
+                  : 'text-green-500'
+              }`}>
                 {statusMessage}
               </p>
             )}
